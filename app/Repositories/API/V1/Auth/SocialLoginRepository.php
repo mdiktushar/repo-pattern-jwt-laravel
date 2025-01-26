@@ -14,7 +14,7 @@ class SocialLoginRepository implements SocialLoginRepositoryInterface
      *
      * @param string $email The email address of the user.
      *
-     * @return mixed
+     * @return User|null The user object if found, null otherwise.
      */
     public function findByEmail(string $email):mixed
     {

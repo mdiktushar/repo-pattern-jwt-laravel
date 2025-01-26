@@ -28,7 +28,8 @@ class RegisterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => "required|string",
+            'first_name' => "required|string",
+            'last_name'  => "required|string",
             'email'      => "required|email|unique:users",
             'password'   => "required|confirmed",
         ];
@@ -42,8 +43,11 @@ class RegisterRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Name is required.',
-            'name.string'   => 'Name must be a string.',
+            'first_name.required' => 'First name is required.',
+            'first_name.string'   => 'First name must be a string.',
+
+            'last_name.required' => 'Last name is required.',
+            'last_name.string'   => 'Last name must be a string.',
 
             'email.required' => 'Email address is required.',
             'email.email'    => 'Email address must be a valid email format.',
@@ -73,12 +77,15 @@ class RegisterRequest extends FormRequest
     protected function failedValidation(Validator $validator):never
     {
 
-        $nameError = $validator->errors()->get('name') ?? null;
+        $firstNameErrors = $validator->errors()->get('first_name') ?? null;
+        $lastNameErrors = $validator->errors()->get('last_name') ?? null;
         $emailErrors = $validator->errors()->get('email') ?? null;
         $passwordErrors = $validator->errors()->get('password') ?? null;
 
-        if ($nameError) {
-            $message = $nameError[0];
+        if ($firstNameErrors) {
+            $message = $firstNameErrors[0];
+        } else if ($lastNameErrors) {
+            $message = $lastNameErrors[0];
         } else if ($emailErrors) {
             $message = $emailErrors[0];
         } else if ($passwordErrors) {

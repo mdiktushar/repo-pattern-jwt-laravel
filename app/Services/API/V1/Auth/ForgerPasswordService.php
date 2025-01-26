@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Repositories\API\V1\Auth\ForgetPasswordRepositoryInterface;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 
 class ForgerPasswordService

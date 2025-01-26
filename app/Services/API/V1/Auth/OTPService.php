@@ -5,6 +5,7 @@ namespace App\Services\API\V1\Auth;
 use App\Exceptions\OTPExpiredException;
 use App\Exceptions\OTPMismatchException;
 use App\Exceptions\UserAlreadyVarifiedException;
+use App\Jobs\SendOTPEmail;
 use App\Repositories\API\V1\Auth\OTPRepositoryInterface;
 use App\Models\User;
 use Exception;

@@ -3,8 +3,6 @@
 namespace App\Repositories\API\V1\Auth;
 
 use App\Models\User;
-use App\Models\Otp;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Exceptions\OTPExpiredException;
 use App\Exceptions\OTPMismatchException;

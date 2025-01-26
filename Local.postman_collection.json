@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "03c9ddbe-2aa0-425a-9c6b-691b63bd676d",
-		"name": "Live",
+		"_postman_id": "12ced6ee-f9fc-4f6c-8d48-bd397ccb8251",
+		"name": "Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "15867367"
+		"_exporter_id": "15867367",
+		"_collection_link": "https://fsd111-3896.postman.co/workspace/Atomana~2640e193-a2f3-4584-a28a-0788d09072d8/collection/15867367-12ced6ee-f9fc-4f6c-8d48-bd397ccb8251?action=share&source=collection_link&creator=15867367"
 	},
 	"item": [
 		{
@@ -48,7 +49,7 @@
 									]
 								},
 								"url": {
-									"raw": "{{live_url}}/api/v1/auth/forget-password/oto-send",
+									"raw": "{{live_url}}/api/v1/auth/forget-password/otp-send",
 									"host": [
 										"{{live_url}}"
 									],
@@ -57,7 +58,7 @@
 										"v1",
 										"auth",
 										"forget-password",
-										"oto-send"
+										"otp-send"
 									]
 								},
 								"description": "{  \n\"success\": true,  \n\"code\": 200,  \n\"message\": \"otp sended\",  \n\"data\": {  \n\"otp\": 195860  \n},  \n\"timestamp\": \"2024-12-09T13:52:57+00:00 GMT+00:00\"  \n}"
@@ -105,7 +106,7 @@
 									]
 								},
 								"url": {
-									"raw": "{{live_url}}/api/v1/auth/forget-password/oto-match",
+									"raw": "{{live_url}}/api/v1/auth/forget-password/otp-match",
 									"host": [
 										"{{live_url}}"
 									],
@@ -114,7 +115,7 @@
 										"v1",
 										"auth",
 										"forget-password",
-										"oto-match"
+										"otp-match"
 									]
 								},
 								"description": "{  \n\"success\": true,  \n\"code\": 200,  \n\"message\": \"otp verified\",  \n\"data\": null,  \n\"timestamp\": \"2024-12-09T13:53:37+00:00 GMT+00:00\"  \n}"
@@ -313,7 +314,7 @@
 								},
 								{
 									"key": "email",
-									"value": "govedax561@dfesc.com",
+									"value": "wawisad600@xcmexico.com",
 									"type": "text"
 								},
 								{
@@ -555,7 +556,7 @@
 	"variable": [
 		{
 			"key": "live_url",
-			"value": "https://atomana.softvencefsd.xyz",
+			"value": "https://atomana.test",
 			"type": "string"
 		}
 	]
