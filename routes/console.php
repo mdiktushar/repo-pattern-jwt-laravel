@@ -1,5 +1,6 @@
 <?php
 
+use App\Console\Commands\CheckPhpFiles;
 use App\Console\Commands\MakeInterface;
 use App\Console\Commands\MakeRepository;
 use App\Console\Commands\MakeService;
@@ -38,5 +39,10 @@ Artisan::command('make:interface {name}', function($name) {
 Artisan::command('make:trait {name}', function($name) {
     // Call the MakeTrait command and pass the 'name' argument
     $this->call(MakeTrait::class, ['name' => $name]);
+});
+
+// whitespace check
+Artisan::command('check:whitespace', function () {
+    $this->call(CheckPhpFiles::class);
 });
 
